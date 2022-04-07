@@ -1,18 +1,18 @@
 // Задание 1
 
-// let a = 1, b = 1, c, d;
+let a = 1, b = 1, c, d;
 
 
 // Переменная с хранит 2 потому что '++' - это унарный оператор, который прибавляет единицу к переменной при возвращении значения, если стоит перед переменной.
 
-// c = ++a;
-// console.log(c);
+c = ++a;
+console.log(c);
 
 
 // Переменная с хранит 1 потому что, в данном случае оператор '++' стоит после переменной и сначала при возвращении вернется значение переменной, а после он прибавит 1.
 
-// d = b++;
-// console.log(d);
+d = b++;
+console.log(d);
 
 /*
 В данном выражении есть два решения:
@@ -22,8 +22,8 @@
 2. Если скрыть первое выражение то переменная 'с' будет хранить 4, так как в данном примере JS видит 'а' = 1,
 при выполнении оператора '++' прибавляет еще 1-цу итого получаем 'а' = 2, 2 + 2 = 4.
 */
-// c = 2 + ++a;
-// console.log(c);
+c = 2 + ++a;
+console.log(c);
 
 /*
 В данном случае таже ситуация что и выше:
@@ -33,26 +33,26 @@
 
 2. Если скрыть первое выражение то переменная 'd' будет хранить 3, так как переменная 'b' вернется 1-цой, а 2 + 1 = 3.
 */
-// d = 2 + b++;
-// console.log(d);
+d = 2 + b++;
+console.log(d);
 
 // Выведет в консоль 'a' = 3, так как изначально 'a' = 1, и мы использовали 2 раза оператор '++'
-// console.log(a);
+console.log(a);
 
 // Выведет в консоль 'b' = 3, так как изначально 'b' = 1, и мы использовали 2 раза оператор '++'
-// console.log(b);
+console.log(b);
 
 // Задание 2
 
-// let a = 2;
-// let x = 1 + (a *= 2);
+let a = 2;
+let x = 1 + (a *= 2);
 
 /*Переменная х хранит 5, так как данное выражение (a *= 2) умножает переменную а(2) на 2.
 В свою очередь переменная а при выводе в консоль хранит в себе 4, так как в том же выражении (a *= 2),
 выполняется присвоение с умножением.*/
 
-// console.log(x);
-// console.log(a);
+console.log(x);
+console.log(a);
 
 // Задание 3
 
@@ -66,22 +66,22 @@
 a и b.
 В остальных случаях программа не должна ничего выводить.*/
 
-// const a = Number(prompt('Введите первое число'))
-// const b = Number(prompt('Введите второе число'))
+const a = Number(prompt('Введите первое число'))
+const b = Number(prompt('Введите второе число'))
 
-// if (a && b >= 1) {
-//     const diff = (a - b);
-//     console.log(diff);
-// } else if (a && b <= -1) {
-//     const mult = (a * b);
-//     console.log(-mult);
-// } else if (a <= -1 && b >= 1) {
-//     const sum = (a + b);
-//     console.log(sum);
-// } else if (a >= 1 && b <= -1) {
-//     const sum = (a + b);
-//     console.log(sum);
-// }
+if (a && b >= 1) {
+    const diff = (a - b);
+    console.log(diff);
+} else if (a && b <= -1) {
+    const mult = (a * b);
+    console.log(-mult);
+} else if (a <= -1 && b >= 1) {
+    const sum = (a + b);
+    console.log(sum);
+} else if (a >= 1 && b <= -1) {
+    const sum = (a + b);
+    console.log(sum);
+}
 
 // Задание 4
 
@@ -103,39 +103,39 @@ console.log(sum(2, 6)); должно вывести число 8 в консол
 Функциям всегда передаются корректные числа, проверки на NaN, Infinity делать
 не нужно.*/
 
-// const a = Number(prompt('Введите первое число'))
-// const b = Number(prompt('Введите второе число'))
+const a = Number(prompt('Введите первое число'))
+const b = Number(prompt('Введите второе число'))
 
 // 1. Сложение
 
-// function sum(a, b) {
-//     return a + b;
-// }
-// console.log(sum(a, b))
+function sum(a, b) {
+    return a + b;
+}
+console.log(sum(a, b))
 
-// // 2. Разность
+// 2. Разность
 
-// const diff = (a, b) => {
-//     if (a <= 0) {
-//         return a - b;
-//     } else {
-//         return b - a;
-//     }
-// }
-// console.log(diff(a, b));
+const diff = (a, b) => {
+    if (a <= 0) {
+        return a - b;
+    } else {
+        return b - a;
+    }
+}
+console.log(diff(a, b));
 
-// // 3. Умножение
+// 3. Умножение
 
-// const sum = (a, b) => a * b;
-// console.log(sum(a, b));
+const sum = (a, b) => a * b;
+console.log(sum(a, b));
 
-// // 4. Деление
+// 4. Деление
 
-// const div = (a, b) => {
-//     if (a <= 0) {
-//         return a / b;
-//     } else {
-//         return b / a;
-//     }
-// }
-// console.log(div(a, b));
+const div = (a, b) => {
+    if (a <= 0) {
+        return a / b;
+    } else {
+        return b / a;
+    }
+}
+console.log(div(a, b));
